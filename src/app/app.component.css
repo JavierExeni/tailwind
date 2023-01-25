@@ -1,0 +1,47 @@
+.bubble {
+  clip-path: circle(25%);
+}
+
+@media (min-width: 400px) {
+  .bubble {
+    clip-path: circle(30%);
+  }
+}
+
+@media (min-width: 680px) {
+  .bubble {
+    clip-path: circle(45%);
+  }
+}
+
+.bubble-expand {
+  animation-name: expand;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes expand {
+  from {
+    clip-path: circle(50%);
+  }
+  to {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+
+.bubble-close {
+  animation-name: close;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes close {
+  from {
+    clip-path: circle(100% at 50% 50%);
+  }
+  to {
+    clip-path: circle(50%);
+  }
+}
